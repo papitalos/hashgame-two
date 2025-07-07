@@ -1,6 +1,3 @@
-
-
-/*corpo do site*/
 body {
     display: flex;
     justify-content: center;
@@ -11,7 +8,6 @@ body {
     margin: 0;
 }
 
-/*jogo da velha principal*/
 .game-board {
     display: grid;
     width: 609px;
@@ -112,36 +108,26 @@ body {
 }
 
 
-/* Estilos para X */
 .sub-cell.clicked.x::before {
     content: "X";
     color: #90603b;
-    /* Cor vermelha para X */
     font-size: 2em;
-    /* Tamanho da fonte */
 }
 
-/* Estilos para O */
 .sub-cell.clicked.o::before {
     content: "O";
     color: #7a7a36;
-    /* Cor azul para O */
     font-size: 2em;
-    /* Tamanho da fonte */
 }
 .sub-cell[data-state = x]::before{
         content: "X";
         color: #90603b;
-        /* Cor vermelha para X */
         font-size: 1em;
-        /* Tamanho da fonte */
 }
 .sub-cell[data-state=o]::before {
     content: "O";
     color: #7a7a36;
-    /* Cor vermelha para X */
     font-size: 1em;
-    /* Tamanho da fonte */
 }
 
 .cell[data-winner='o']::after {
@@ -152,11 +138,9 @@ body {
     border-radius: 8px;
     padding: 8px;
     font-size: 1em;
-    /* Ajuste o tamanho da fonte conforme necessário */
     position: absolute;
     left: 83%;
     top: 80%;
-    /* Posicionamento absoluto em relação à .cell */
     z-index: 1;
 }
 
@@ -171,7 +155,6 @@ body {
     border-radius: 8px;
     padding: 8px;
     font-size: 5em;
-    /* Ajuste o tamanho da fonte conforme necessário */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,22 +162,16 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* Posicionamento absoluto em relação à .cell */
     z-index: 1;
 }
 
 .win-msg[champion="x"] {
     content: "X Ganhou!";
-    /* estilos específicos para quando o jogador X ganha */
     background-color: beige;
-    /* substitua com o caminho real da sua imagem de fundo */
     color: white;
-    /* cor do texto */
     font-size: 2em;
-    /* tamanho do texto */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    /* ou o tamanho que você deseja para a área de exibição da mensagem */
 }
